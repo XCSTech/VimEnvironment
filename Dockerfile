@@ -13,4 +13,4 @@ RUN pip install pymysql pymssql flask flask_restful flask_cors coloredlogs bugsn
 
 RUN nvim -c PlugInstall +qall
 
-RUN ~/tconfig.sh
+CMD ["~/tconfig.sh"]
