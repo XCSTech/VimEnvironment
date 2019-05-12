@@ -8,9 +8,8 @@ RUN ~/.fzf/install
 RUN mkdir -p ~/.config/nvim/
 RUN mv ~/dev/init.vim ~/.config/nvim/init.vim
 RUN mv ~/dev/tconfig.sh ~/tconfig.sh
+RUN chmod +x ~/tconfig.sh
 
-RUN pip install pymysql pymssql flask flask_restful flask_cors coloredlogs bugsnag fpdf
+RUN pip install virtualenv
 
 RUN nvim -c PlugInstall +qall
-
-CMD ["~/tconfig.sh"]
