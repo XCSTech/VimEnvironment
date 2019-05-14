@@ -17,13 +17,15 @@ Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-repeat'
 Plug 'neomake/neomake'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
-set number
+set relativenumber
+set shiftwidth=4
 
 map <C-p> :Files<CR>
 
