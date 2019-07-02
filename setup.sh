@@ -14,7 +14,7 @@ sudo apt-get upgrade -y
 
 
 # Install apps and dependancies for docker/python/node
-sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev -y
 # Install docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
