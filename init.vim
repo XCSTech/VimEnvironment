@@ -17,7 +17,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-repeat'
 Plug 'neomake/neomake'
+Plug 'nightsense/carbonized'
 Plug 'scrooloose/nerdtree'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -25,7 +27,6 @@ imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 set relativenumber
-set shiftwidth=4
 
 map <C-p> :Files<CR>
 
@@ -64,3 +65,4 @@ endfu
 set tabline=%!MyTabLine()
 
 set rtp+=~/.fzf
+set shiftwidth=4

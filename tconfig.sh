@@ -1,9 +1,12 @@
 #!/bin/sh
 
 tmux new-session -d
-tmux select-pane -t 0
-tmux split-window -v -p 20
-tmux split-window -h -p 50
-tmux select-pane -t 0
-tmux split-window -h -p 50
+
+tmux selectp -t 0
+tmux splitw -h -p 50
+tmux new-window
+tmux splitw -h -p 50
+tmux selectp -t 1
+tmux splitw -v -p 50
+
 tmux attach
