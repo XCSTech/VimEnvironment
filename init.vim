@@ -20,6 +20,7 @@ Plug 'neomake/neomake'
 Plug 'nightsense/carbonized'
 Plug 'scrooloose/nerdtree'
 Plug 'rust-lang/rust.vim'
+Plug 'tomtom/tcomment_vim'
 
 call plug#end()
 
