@@ -67,3 +67,5 @@ set tabline=%!MyTabLine()
 
 set rtp+=~/.fzf
 set shiftwidth=4
+
+let g:user_emmit_settings = {'html':{'block_all_childless':1}}
