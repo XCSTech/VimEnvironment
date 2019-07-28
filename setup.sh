@@ -1,3 +1,5 @@
+# Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work
+
 # create password for user
 sudo passwd $(whoami)
 
@@ -65,3 +67,5 @@ sudo curl https://sh.rustup.rs -sSf | sh
 chsh -s $(which zsh)
 
 cd ~/
+
+echo "Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work"
