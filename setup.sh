@@ -1,10 +1,14 @@
 # Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work
+## VARIABLES
+VERNODEJS="https://deb.nodesource.com/setup_10.x"
+VERPYTH="3.7.3"
+HOMEDIR=$(pwd)
 
 # create password for user
 sudo passwd $(whoami)
 
 # Node JS repo
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL $VERNODEJS | sudo -E bash -
 # Docker repo
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
@@ -43,19 +47,20 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Make custom python
 cd ~/
-mkdir -p Python/3.7
-cd Python/3.7/
-# Python 3.7.3
-wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz
-tar -xf Python-3.7.3.tar.xz
-cd Python-3.7.3/
+mkdir -p Python/$VERPYTH
+cd Python/$VERPYTH/
+# Python compile
+wget https://www.python.org/ftp/python/$VERPYTH/Python-$VERPYTH.tar.xz
+tar -xf Python-$VERPYTH.tar.xz
+cd Python-$VERPYTH/
 sudo ./configure --enable-optimizations --with-zlib-dir=/usr/local/lib
 sudo make
 sudo make install
-rm ~/Python/3.7/Python-3.7.3.tar.xz
+rm ~/Python/$VERPYTH/Python-$VERPYTH.tar.xz
 # Upgrade pip and install virtual env
 sudo ./python -m pip install --upgrade pip
 sudo ./python -m pip install virtualenv
+sudo ./python -m pip install pynvim
 
 # Install Vue Cli 3
 sudo npm install -g @vue/cli
@@ -67,5 +72,10 @@ sudo curl https://sh.rustup.rs -sSf | sh
 chsh -s $(which zsh)
 
 cd ~/
+
+# Modify nvim config to match python
+echo "let g:python3_host_prog='$HOMEDIR/Python/$VERPYTH/Python-$VERPYTH/python'" >> ~/.config/nvim/init.vim
+echo "let g:deoplete#enable_at_startup = 1" >> ~/.config/nvim/init.vim
+
 
 echo "Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work"

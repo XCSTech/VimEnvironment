@@ -1,5 +1,3 @@
-let g:python3_host_prog='/home/keithklassen/Python/3.7/Python-3.7.3/python'
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -68,4 +66,3 @@ set tabline=%!MyTabLine()
 
 set rtp+=~/.fzf
 set shiftwidth=4
-let g:deoplete#enable_at_startup = 1
