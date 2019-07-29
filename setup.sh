@@ -7,6 +7,9 @@ HOMEDIR=$(pwd)
 # create password for user
 sudo passwd $(whoami)
 
+# Add NVIM stable repository
+sudo add-apt-repository ppa:neovim-ppa/stable
+
 # Node JS repo
 curl -sL $VERNODEJS | sudo -E bash -
 # Docker repo
