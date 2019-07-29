@@ -8,7 +8,7 @@ HOMEDIR=$(pwd)
 sudo passwd $(whoami)
 
 # Add NVIM stable repository
-sudo add-apt-repository ppa:neovim-ppa/stable
+echo 'sudo add-apt-repository ppa:neovim-ppa/stable if on ubuntu'
 
 # Node JS repo
 curl -sL $VERNODEJS | sudo -E bash -
