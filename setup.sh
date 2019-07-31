@@ -7,23 +7,18 @@ HOMEDIR=$(pwd)
 # create password for user
 sudo passwd $(whoami)
 
-# Add NVIM stable repository
-echo 'sudo add-apt-repository ppa:neovim-ppa/stable if on ubuntu'
-
 # Node JS repo
 curl -sL $VERNODEJS | sudo -E bash -
 # Docker repo
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 
-
 # update and upgrade
 sudo apt-get update
 sudo apt-get upgrade -y
 
-
 # Install apps and dependancies for docker/python/node
-sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev -y
+sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev ranger -y
 # Install docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
@@ -82,3 +77,5 @@ echo "let g:deoplete#enable_at_startup = 1" >> ~/.config/nvim/init.vim
 
 
 echo "Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work"
+# Add NVIM stable repository
+echo 'sudo add-apt-repository ppa:neovim-ppa/stable if on ubuntu "if on ubuntu"'
