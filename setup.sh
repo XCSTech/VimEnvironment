@@ -18,14 +18,13 @@ curl -sL $VERNODEJS | sudo -E bash -
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 
-
 # update and upgrade
 sudo apt-get update
 sudo apt-get upgrade -y
 
-
 # Install apps and dependancies for docker/python/node
-sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev libbz2-dev -y
+sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev libbz2-dev ranger -y
+
 # Install docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
