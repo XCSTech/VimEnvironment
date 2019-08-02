@@ -8,7 +8,9 @@ HOMEDIR=$(pwd)
 sudo passwd $(whoami)
 
 # Add NVIM stable repository
-echo 'sudo add-apt-repository ppa:neovim-ppa/stable if on ubuntu'
+#echo 'sudo add-apt-repository ppa:neovim-ppa/stable if on ubuntu'
+
+sudo apt-get install curl -y
 
 # Node JS repo
 curl -sL $VERNODEJS | sudo -E bash -
@@ -23,7 +25,7 @@ sudo apt-get upgrade -y
 
 
 # Install apps and dependancies for docker/python/node
-sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev -y
+sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev libbz2-dev -y
 # Install docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
@@ -64,6 +66,7 @@ rm ~/Python/$VERPYTH/Python-$VERPYTH.tar.xz
 sudo ./python -m pip install --upgrade pip
 sudo ./python -m pip install virtualenv
 sudo ./python -m pip install pynvim
+sudo ln -s ~/python/$VERPYTH/Python-$VERPYTH/python /usr/bin/p3
 
 # Install Vue Cli 3
 sudo npm install -g @vue/cli
