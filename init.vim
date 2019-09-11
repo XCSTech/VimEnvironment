@@ -69,3 +69,7 @@ set rtp+=~/.fzf
 set shiftwidth=4
 
 let g:user_emmit_settings = {'html':{'block_all_childless':1}}
+nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+
+set cursorline
+set cursorcolumn
