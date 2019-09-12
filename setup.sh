@@ -43,6 +43,7 @@ cp init.vim ~/.config/nvim
 cp tconfig.sh ~/
 cp aaron.zsh-theme ~/.oh-my-zsh/themes/
 cp .zshrc ~/
+cp .tmux.conf ~/
 
 # Load Plug package manager
 cd ~/.config/nvim/autoload
@@ -65,10 +66,15 @@ rm ~/Python/$VERPYTH/Python-$VERPYTH.tar.xz
 sudo ./python -m pip install --upgrade pip
 sudo ./python -m pip install virtualenv
 sudo ./python -m pip install pynvim
+sudo ./python -m pip install black
+sudo ./python -m pip install pylint
 sudo ln -s ~/python/$VERPYTH/Python-$VERPYTH/python /usr/bin/p3
 
 # Install Vue Cli 3
 sudo npm install -g @vue/cli
+sudo npm install -g eslint
+sudo npm install -g prettier
+sudo npm isntall -g eslint-plugin-prettier
 
 # Install rust
 sudo curl https://sh.rustup.rs -sSf | sh

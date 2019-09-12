@@ -21,6 +21,9 @@ Plug 'nightsense/carbonized'
 Plug 'scrooloose/nerdtree'
 Plug 'rust-lang/rust.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'w0rp/ale'
+Plug 'ambv/black'
+Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript','css','scss','json','vue','html']}
 
 call plug#end()
 
@@ -69,7 +72,14 @@ set rtp+=~/.fzf
 set shiftwidth=4
 
 let g:user_emmit_settings = {'html':{'block_all_childless':1}}
+
 nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 
 set cursorline
 set cursorcolumn
+set expandtab
+
+let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fix_on_save = 1
+
+let g:prettier#config#tab_width = 4
