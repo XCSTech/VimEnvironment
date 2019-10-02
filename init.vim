@@ -85,6 +85,7 @@ let g:ale_fix_on_save = 1
 let g:prettier#config#tab_width = 4
 
 nnoremap <silent> <C-i> :Buffers<cr>
+noremap <A-i> :BLines<cr>
 noremap Zz <c-w>_\|<c-w>\|
 noremap Zo <c-w>=
 noremap L <c-w>l
