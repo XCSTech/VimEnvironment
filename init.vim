@@ -78,6 +78,7 @@ nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --excl
 set cursorline
 set cursorcolumn
 set expandtab
+set ignorecase
 
 let g:ale_fixers = {'javascript': ['eslint']}
 let g:ale_fix_on_save = 1
