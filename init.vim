@@ -25,6 +25,7 @@ Plug 'w0rp/ale'
 Plug 'ambv/black'
 Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript','css','scss','json','vue','html'] }
 Plug 'wakatime/vim-wakatime'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
