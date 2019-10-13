@@ -23,7 +23,9 @@ Plug 'rust-lang/rust.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'w0rp/ale'
 Plug 'ambv/black'
-Plug 'prettier/vim-prettier', {'do': 'npm install', 'for': ['javascript','css','scss','json','vue','html']}
+Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript','css','scss','json','vue','html'] }
+Plug 'wakatime/vim-wakatime'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -72,15 +74,18 @@ set rtp+=~/.fzf
 set shiftwidth=4
 
 let g:user_emmit_settings = {'html':{'block_all_childless':1}}
-
-nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+let g:python3_host_prog='/home/keith/Python/3.7.3/Python-3.7.3/python'
+let g:deoplete#enable_at_startup = 1
 
 set cursorline
 set cursorcolumn
-set expandtab
+
 set ignorecase
 
-let g:ale_fixers = {'javascript': ['eslint']}
+nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+
+set expandtab
+let g:ale_fixers = { 'javascript': ['eslint'] }
 let g:ale_fix_on_save = 1
 
 let g:prettier#config#tab_width = 4
