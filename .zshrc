@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/keith/.oh-my-zsh"
+  export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -13,7 +13,7 @@ alias gitdir="/mnt/c/Users/keithk/gits"
 alias mytmux="~/tconfig.sh"
 alias killtmux="tmux kill-session -t 0"
 
-cd /mnt/c/Users/keithk/gits
+cd ~/gits
 
 eval `dircolors ~/dircolors-solarized/dircolors.256dark`
 

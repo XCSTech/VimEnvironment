@@ -90,3 +90,5 @@ echo "let g:deoplete#enable_at_startup = 1" >> ~/.config/nvim/init.vim
 
 
 echo "Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work"
+
+mkdir ~/dircolors-solarized; cp ~/gits/VimEnvironment/dircolors.256dark ~/dircolors-solarized/;

@@ -26,6 +26,7 @@ Plug 'ambv/black'
 Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript','css','scss','json','vue','html'] }
 Plug 'wakatime/vim-wakatime'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
 
@@ -96,3 +97,5 @@ noremap Zz <c-w>_\|<c-w>\|
 noremap Zo <c-w>=
 noremap L <c-w>l
 noremap H <c-w>h
+
+set hidden
