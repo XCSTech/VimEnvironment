@@ -1,7 +1,8 @@
 # Run :UpdateRemotePlugins from neovim to update if deoplete doesn't work
 ## VARIABLES
-VERNODEJS="https://deb.nodesource.com/setup_10.x"
-VERPYTH="3.7.3"
+VERNODEJS="https://deb.nodesource.com/setup_12.x"
+VERPYTH="3.8.0"
+DEBIANVER="buster"
 HOMEDIR=$(pwd)
 
 # create password for user
@@ -16,14 +17,14 @@ sudo apt-get install curl -y
 curl -sL $VERNODEJS | sudo -E bash -
 # Docker repo
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $DEBIANVER stable"
 
 # update and upgrade
 sudo apt-get update
 sudo apt-get upgrade -y
 
 # Install apps and dependancies for docker/python/node
-sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev libbz2-dev liblzma-dev ranger -y
+sudo apt-get install git neovim zsh tmux xz-utils build-essential zlib1g-dev screen libffi-dev libssl-dev openssl nodejs apt-transport-https ca-certificates curl gnupg2 software-properties-common libsqlite3-dev libbz2-dev liblzma-dev ranger tmux -y
 
 # Install docker
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
@@ -83,6 +84,10 @@ sudo curl https://sh.rustup.rs -sSf | sh
 chsh -s $(which zsh)
 
 cd ~/
+
+# fzf install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # Modify nvim config to match python
 echo "let g:python3_host_prog='$HOMEDIR/Python/$VERPYTH/Python-$VERPYTH/python'" >> ~/.config/nvim/init.vim
