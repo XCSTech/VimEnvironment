@@ -46,6 +46,12 @@ cp aaron.zsh-theme ~/.oh-my-zsh/themes/
 cp .zshrc ~/
 cp .tmux.conf ~/
 
+# update the zshrc location (wierd error with incorrect relative pathing)
+sudo sed -i 's/\~\//$HOMEDIR/g' ~/.zshrc
+
+# Tmux powerline themes
+git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
+
 # Load Plug package manager
 cd ~/.config/nvim/autoload
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
