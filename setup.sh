@@ -84,7 +84,7 @@ sudo npm install -g prettier
 sudo npm isntall -g eslint-plugin-prettier
 
 # Install rust
-sudo curl https://sh.rustup.rs -sSf | sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # Change shell to zsh as default
 chsh -s $(which zsh)
