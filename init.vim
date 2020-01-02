@@ -97,5 +97,6 @@ noremap Zz <c-w>_\|<c-w>\|
 noremap Zo <c-w>=
 noremap L <c-w>l
 noremap H <c-w>h
+nnoremap <esc> :noh<return><esc>
 
 set hidden
