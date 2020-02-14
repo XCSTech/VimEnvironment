@@ -95,7 +95,7 @@ nnoremap <silent> <C-i> :Buffers<cr>
 noremap <A-i> :BLines<cr>
 noremap Zz <c-w>_\|<c-w>\|
 noremap Zo <c-w>=
-noremap <A-e> <c-w>_\|<c-w>\|
+noremap <A-u> <c-w>_\|<c-w>\|
 noremap <A-o> <c-w>=
 noremap L <c-w>l
 noremap H <c-w>h
