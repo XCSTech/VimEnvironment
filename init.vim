@@ -100,9 +100,8 @@ noremap <A-u> <c-w>=
 noremap L <c-w>l
 noremap H <c-w>h
 noremap <A-q> <c-w>v
-noremap <A-w> <c-w>h
-noremap <A-d> :q<CR>
-noremap <A-s> :w<CR>
+nnoremap <A-s> :w<CR>
+nnoremap <A-d> :q<CR>
 nnoremap <esc> :noh<return><esc>
 
 set hidden
