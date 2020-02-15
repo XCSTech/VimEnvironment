@@ -99,9 +99,9 @@ noremap <A-o> <c-w>_\|<c-w>\|
 noremap <A-u> <c-w>=
 noremap L <c-w>l
 noremap H <c-w>h
-noremap <A-q> <c-w>v
-nnoremap <A-s> :w<CR>
-nnoremap <A-d> :q<CR>
+noremap <A-w> <c-w>v
+nnoremap <A-s> <C-o>:w<CR>
+nnoremap <A-d> <C-o>:q<CR>
 nnoremap <esc> :noh<return><esc>
 
 set hidden
