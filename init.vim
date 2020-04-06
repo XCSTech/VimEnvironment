@@ -107,7 +107,7 @@ nnoremap <esc> :noh<return><esc>
 
 set hidden
 
-:imap kj <Esc>
+:imap jj <Esc>
 
 nnoremap <Leader>w :update<cr>
 inoremap <Leader>w <Esc>:update<cr>
