@@ -27,6 +27,7 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript','css',
 Plug 'wakatime/vim-wakatime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'severin-lemaignan/vim-minimap'
 
 call plug#end()
 
@@ -100,3 +101,5 @@ noremap H <c-w>h
 nnoremap <esc> :noh<return><esc>
 
 set hidden
+
+:imap <Leader><Tab> <Esc>
