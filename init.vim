@@ -106,3 +106,5 @@ nnoremap <A-d> <C-o>:q<CR>
 nnoremap <esc> :noh<return><esc>
 
 set hidden
+
+:imap kj <Esc>
