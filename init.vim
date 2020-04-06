@@ -110,6 +110,7 @@ set hidden
 :imap kj <Esc>
 
 nnoremap <Leader>w :update<cr>
-inoremap <Leader>w <Esc>:update<cr>gi
+inoremap <Leader>w <Esc>:update<cr>
+inoremap <Leader>o <Esc>O
 
 set foldmethod=indent
