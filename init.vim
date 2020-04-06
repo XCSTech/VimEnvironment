@@ -108,3 +108,5 @@ nnoremap <esc> :noh<return><esc>
 set hidden
 
 :imap kj <Esc>
+
+set foldMethod=indent
