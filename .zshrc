@@ -15,7 +15,7 @@ alias killtmux="tmux kill-session -t 0"
 
 cd /mnt/c/Users/keithk/gits
 
-eval `dircolors ~/dircolors-solarized/dircolors.256dark`
+# eval `dircolors ~/dircolors-solarized/dircolors.256dark`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
