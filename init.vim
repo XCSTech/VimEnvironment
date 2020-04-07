@@ -32,6 +32,9 @@ Plug 'severin-lemaignan/vim-minimap'
 call plug#end()
 
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" let g:user_emmet_settings = {'html':{'block_all_childless': 1,
+" 'inline_elements': 'one,two', 'block_elements': 'div,aside'}}
+let g:user_emmet_settings = {'html':{'block_all_childless': 1}}
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 set relativenumber
