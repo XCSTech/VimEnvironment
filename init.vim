@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/bundle')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'bling/vim-airline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'posva/vim-vue'
 Plug 'airblade/vim-gitgutter'
@@ -27,11 +28,10 @@ Plug 'wakatime/vim-wakatime'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'severin-lemaignan/vim-minimap'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 call plug#end()
 
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 set relativenumber
