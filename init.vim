@@ -114,6 +114,12 @@ set hidden
 
 nnoremap <Leader>w :update<cr>
 inoremap <Leader>w <Esc>:update<cr>
-inoremap <Leader>o <Esc>O
+inoremap OO <Esc>O
+inoremap AA <Esc>A
+inoremap II <Esc>I
+inoremap DD <Esc>dd
+inoremap UU <Esc>u
+inoremap oo <Esc>o
+inoremap caw <Esc>caw
 
 set foldmethod=indent
