@@ -119,7 +119,12 @@ inoremap AA <Esc>A
 inoremap II <Esc>I
 inoremap DD <Esc>dd
 inoremap UU <Esc>u
-inoremap oo <Esc>o
+inoremap Oo <Esc>o
+inoremap Cc <Esc>cc
+inoremap $$ <Esc>$
+inoremap ^^ <Esc>^
+inoremap ZZ <Esc>ZZ
+inoremap ZQ <Esc>ZQ
 inoremap caw <Esc>caw
 
 set foldmethod=indent
