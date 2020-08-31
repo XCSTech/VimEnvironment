@@ -79,8 +79,9 @@ set rtp+=~/.fzf
 set shiftwidth=4
 
 let g:user_emmit_settings = {'html':{'block_all_childless':1}}
-let g:python3_host_prog='/home/keith/Python/3.7.3/Python-3.7.3/python'
+let g:python3_host_prog='/usr/local/opt/python@3.7/bin/python3.7'
 let g:deoplete#enable_at_startup = 1
+let g:black_virtualenv = '/Users/keithk/gits/blackenv'
 
 set cursorline
 set cursorcolumn
@@ -99,14 +100,17 @@ nnoremap <silent> <C-i> :Buffers<cr>
 noremap <A-i> :BLines<cr>
 noremap Zz <c-w>_\|<c-w>\|
 noremap Zo <c-w>=
+noremap <Leader>o <c-w>_\|<c-w>\|
 noremap <A-o> <c-w>_\|<c-w>\|
+noremap <Leader>u <c-w>=
 noremap <A-u> <c-w>=
 noremap L <c-w>l
 noremap H <c-w>h
 noremap <A-w> <c-w>v
-nnoremap <A-s> <C-o>:w<CR>
-nnoremap <A-d> <C-o>:q<CR>
+noremap <Leader>q <c-w>v
 nnoremap <esc> :noh<return><esc>
+
+map <Leader>t :NERDTreeToggle<CR>
 
 set hidden
 
@@ -128,3 +132,5 @@ inoremap ZQ <Esc>ZQ
 inoremap caw <Esc>caw
 
 set foldmethod=indent
+
+hi SpellBad ctermfg=red ctermbg=None cterm=underline
