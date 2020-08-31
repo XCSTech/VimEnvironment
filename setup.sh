@@ -31,6 +31,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 # Install oh my zsh
 cd ~/; sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Create needed directories
 mkdir -p ~/.config/nvim/autoload

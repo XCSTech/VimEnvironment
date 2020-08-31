@@ -1,19 +1,27 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/keith/.oh-my-zsh"
+  export ZSH="/Users/keithk/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="sobole"
-alias gitdir="/mnt/c/Users/keithk/gits"
+# ZSH_THEME="sobole"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+alias gitdir="/Users/keithk/gits"
 alias mytmux="~/tconfig.sh"
 alias killtmux="tmux kill-session -t 0"
+alias v="nvim"
 
-cd /mnt/c/Users/keithk/gits
+cd /Users/keithk/gits
 
 # eval `dircolors ~/dircolors-solarized/dircolors.256dark`
 
@@ -106,3 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
