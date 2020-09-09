@@ -134,3 +134,5 @@ inoremap caw <Esc>caw
 set foldmethod=indent
 
 hi SpellBad ctermfg=red ctermbg=None cterm=underline
+
+set clipboard=unnamed
