@@ -102,6 +102,9 @@ cd ~/.local/share/xfce4/terminal/colorschemes
 wget https://raw.githubusercontent.com/kuangyujing/dracula-xfce4-terminal/master/Dracula.theme
 cd ~/
 
+# Tmux spotify plugin
+git clone https://github.com/robhurring/tmux-spotify ~/gits/tmux-spotify
+
 # Modify nvim config to match python
 echo "let g:python3_host_prog='$HOMEDIR/Python/$VERPYTH/Python-$VERPYTH/python'" >> ~/.config/nvim/init.vim
 echo "let g:deoplete#enable_at_startup = 1" >> ~/.config/nvim/init.vim
