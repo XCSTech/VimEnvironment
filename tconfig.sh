@@ -4,8 +4,10 @@ tmux new-session -d
 
 tmux selectp -t 0
 tmux splitw -h -p 50
+tmux selectp -t 0
+tmux resize-pane -D 20
 tmux new-window
-tmux splitw -h -p 50
+# tmux splitw -h -p 50
 tmux selectp -t 1
 tmux splitw -v -p 50
 
